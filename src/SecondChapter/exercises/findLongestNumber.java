@@ -2,6 +2,11 @@ package SecondChapter.exercises;
 
 import java.util.Scanner;
 
+/*
+Ввести n чисел с консоли.
+ Найти самое короткое и самое длинное число. Вывести найденные числа
+и их длину.
+*/
 public class findLongestNumber {
     private static String longerNumber;
 
