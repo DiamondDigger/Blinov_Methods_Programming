@@ -2,6 +2,13 @@ package SecondChapter.exercises;
 
 import java.util.Scanner;
 
+/*
+Ввести n чисел с консоли.
+Упорядочить и вывести числа в порядке возрастания (убывания) значений
+их длины.
+*/
+
+
 public class ArrangeInputNumbers {
     private static final String SEQUENCE_OF_NUMBERS = "1 22 333 4 4444 123456789 123 2 12345678 "; // for test
 
