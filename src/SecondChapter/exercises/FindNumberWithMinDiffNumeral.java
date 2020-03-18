@@ -7,8 +7,9 @@ import java.util.Scanner;
 чисел несколько, найти первое из них
  */
 public class FindNumberWithMinDiffNumeral {
-    private static int[] charIndexDiff = new int[10];
+
     private static int sumDiff = 0;
+    private static int countOFDiffNumbers = 0;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -16,23 +17,18 @@ public class FindNumberWithMinDiffNumeral {
         String[] strArr = inputFromConsole.split(" ");
         for (int i = 0; i < strArr.length; i++) {
             char[] diff = strArr[i].toCharArray();
+            sumDiff = 0;
+            int k = 1;
             for (int j = 0; j < diff.length; j++) {
-                int countOfUnequals = 0;
-                for (int k = 0; k < diff.length; k++) {
-                    if(diff[j]==diff[k]&&(k<j)){
-                        break;
+                while (k < diff.length) {
+                    if (diff[k] == diff[j]) {
+                        sumDiff += 1;
                     }
-                        if (diff[j] != diff[k]) {
-                        countOfUnequals += 1;
-                    }
-                }
-                if (countOfUnequals != 0) {
-                    sumDiff += 1;
+                    k++;
                 }
             }
-            charIndexDiff[i] = sumDiff;
-            sumDiff = 0;
-            System.out.print(" - " + charIndexDiff[i]);
+            countOFDiffNumbers = diff.length - sumDiff;
+            System.out.println(countOFDiffNumbers );
         }
     }
 }
