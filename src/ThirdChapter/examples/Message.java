@@ -17,7 +17,10 @@ public class Message<T> {
         this.value = value;
     }
 
-    public String toString(
-
-    )
+    public String toString(){
+        if (value==null){
+            return null;
+        }
+        return value.getClass().getName();
+    }
 }
