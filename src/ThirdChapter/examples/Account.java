@@ -38,4 +38,10 @@ public class Account {
     public void addAmount(double amount) {
         this.amount += amount;
     }
+
+    public String createName(String newName){
+        String name = newName;
+        return name;
+    }
+
 }
