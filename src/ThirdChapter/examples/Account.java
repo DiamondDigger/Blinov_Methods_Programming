@@ -39,6 +39,7 @@ public class Account {
         this.amount += amount;
     }
 
+    //плохой вариант создания поля, каждый раз создается новое поле к которму не достучаться при повторном обращении
     public String createName(String newName){
         String name = newName;
         return name;

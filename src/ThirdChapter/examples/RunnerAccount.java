@@ -15,9 +15,9 @@ public class RunnerAccount {
                 + "\n" + "_______________________________________________________");
 
         account1.setId(12l);
-        account1.setAmount(4000d);
+        account1.addAmount(4000d);
 
-        account2.setAmount(1200d);
+        account2.addAmount(1200d);
 
 
         System.out.println("After recalculation:"
