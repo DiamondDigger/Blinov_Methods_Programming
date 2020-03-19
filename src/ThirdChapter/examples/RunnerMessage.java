@@ -25,5 +25,7 @@ public class RunnerMessage {
         System.out.println(objectMessage);
         objectMessage.setValue((byte)13);
         System.out.println(objectMessage);
+        Number number = new Integer(12);
+        System.out.println( number.floatValue());
     }
 }
