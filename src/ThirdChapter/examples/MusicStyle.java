@@ -3,7 +3,7 @@ package ThirdChapter.examples;
 import java.util.Scanner;
 
 public enum MusicStyle {
-    JAZZ, ROCK, DRUM, TRANCE
+    JAZZ, ROCK, DRUM, TRANCE, FOLK
 }
 
 class MusicRunner {
@@ -13,8 +13,10 @@ class MusicRunner {
         System.out.println(ms);
         Scanner scanner = new Scanner(System.in);
         String inputFromConsole = scanner.nextLine();
-        if (!inputFromConsole.equals(ms.name())){
+        if (inputFromConsole.equals(ms.toString())){
             System.out.println(inputFromConsole);
+        }else {
+            System.out.println("Didn't guess!");
         }
         switch (ms){
             case DRUM:
