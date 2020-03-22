@@ -1,7 +1,7 @@
 package ThirdChapter.exercises.A_01;
 
 public class StudentParameters {
-    enum firstName {
+   enum firstName {
         JANE, JIM, CALL, JOHN, MERRY, BILL, MACK
     }
 
@@ -12,5 +12,4 @@ public class StudentParameters {
     enum lastName {
         FA, KI, BO, KA, VE, ZA, DO
     }
-
 }

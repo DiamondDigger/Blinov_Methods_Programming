@@ -12,7 +12,6 @@ public class Student {
     private double numberOfGroup;
 
     public Student(){
-
     }
 
     public Student(long id, String firstName, String secondName, String lastName, String birthdayDate) {
@@ -55,6 +54,7 @@ public class Student {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
 
     public void setBirthdayDate(String birthdayDate) {
         this.birthdayDate = birthdayDate;
