@@ -1,9 +1,10 @@
 package ThirdChapter.exercises.A_01;
 
+import java.io.IOException;
 import java.util.Arrays;
 
 public class RunnerStudent {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Student student1 = new Student("Jane", "Mack", "Con", "10.11.13", "123-456-789");
         Student student2 = new Student("Karl", "Mk", "Ceb", "12.02.10", "222-222-789");
         Student student3 = new Student("John", "Sal", "Bon", "03.10.98", "333-333-789");
@@ -46,13 +47,15 @@ public class RunnerStudent {
         Student student7 = new Student();
         Student student8 = new Student();
 
+// set name from Enum
+        System.out.println("\n"+"Set name from enum*********************");
         String name = Arrays.toString(StudentParameters.firstName.values());
-        System.out.println("name"+name);
-        name= name.replace("[","");
-        name= name.replace("]","");
-        System.out.println("name after -1- replacement: "+name);
-        name =name.replaceAll(" ", "");
-        System.out.println("name after -2- replacement: "+name);
+        System.out.println("name" + name);
+        name = name.replace("[", "");
+        name = name.replace("]", "");
+        System.out.println("name after -1- replacement: " + name);
+        name = name.replaceAll(" ", "");
+        System.out.println("name after -2- replacement: " + name);
 
         String[] nameArr = name.split(",");
 
@@ -65,5 +68,26 @@ public class RunnerStudent {
         System.out.println(student6);
         System.out.println(student7);
         System.out.println(student8);
+
+        student2.setFirstName(StudentParameters.lastName.DO.toString());
+        student1.setFirstName(StudentParameters.firstName.BILL.toString());
+
+        System.out.println(student1);
+        System.out.println(student2);
+
+
+        // set name from file Names.txt
+        System.out.println("\n"+"Set name from file*********************");
+        GetNameFromFile nameFromFile = new GetNameFromFile();
+
+
+        student5.setFirstName(nameFromFile.getNameFromFile());
+        student6.setFirstName(nameFromFile.getNameFromFile());
+        student7.setFirstName(nameFromFile.getNameFromFile());
+        student8.setFirstName(nameFromFile.getNameFromFile());
+        System.out.println("student5 : "+ student5.getFirstName());
+        System.out.println("student6 : "+student6.getFirstName());
+        System.out.println("student7 : "+student7.getFirstName());
+        System.out.println("student8 : "+student8.getFirstName());
     }
 }
