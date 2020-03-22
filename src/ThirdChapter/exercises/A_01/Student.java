@@ -11,6 +11,10 @@ public class Student {
     private int numberOfCourse;
     private double numberOfGroup;
 
+    public Student(){
+
+    }
+
     public Student(long id, String firstName, String secondName, String lastName, String birthdayDate) {
         this.id = id;
         this.firstName = firstName;
