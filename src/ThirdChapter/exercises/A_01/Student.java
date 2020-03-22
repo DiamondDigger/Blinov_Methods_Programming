@@ -9,7 +9,7 @@ public class Student {
     private String telNumber;
     private String speciality;
     private int numberOfCourse;
-    private int numberOfGroup;
+    private double numberOfGroup;
 
     public Student(long id, String firstName, String secondName, String lastName, String birthdayDate) {
         this.id = id;
@@ -34,5 +34,92 @@ public class Student {
         this.birthdayDate = birthdayDate;
         this.telNumber = telNumber;
         this.speciality = speciality;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setBirthdayDate(String birthdayDate) {
+        this.birthdayDate = birthdayDate;
+    }
+
+    public void setTelNumber(String telNumber) {
+        this.telNumber = telNumber;
+    }
+
+    public void setSpeciality(String speciality) {
+        this.speciality = speciality;
+    }
+
+    public void setNumberOfCourse(int numberOfCourse) {
+        this.numberOfCourse = numberOfCourse;
+    }
+
+    public void setNumberOfGroup(double numberOfGroup) {
+        this.numberOfGroup = numberOfGroup;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getBirthdayDate() {
+        return birthdayDate;
+    }
+
+    public String getTelNumber() {
+        return telNumber;
+    }
+
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public int getNumberOfCourse() {
+        return numberOfCourse;
+    }
+
+    public double getNumberOfGroup() {
+        return numberOfGroup;
+    }
+
+     @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", birthdayDate='" + birthdayDate + '\'' +
+                ", telNumber='" + telNumber + '\'' +
+                ", speciality='" + speciality + '\'' +
+                ", numberOfCourse=" + numberOfCourse +
+                ", numberOfGroup=" + numberOfGroup +
+                '}';
     }
 }
