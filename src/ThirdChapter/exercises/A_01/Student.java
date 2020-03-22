@@ -68,8 +68,8 @@ public class Student {
         this.numberOfCourse = numberOfCourse;
     }
 
-    public void setNumberOfGroup(double numberOfGroup) {
-        this.numberOfGroup = numberOfGroup;
+    public void setNumberOfGroup(int number) {
+        this.numberOfGroup = this.numberOfCourse+ (double)number/10;
     }
 
     public long getId() {

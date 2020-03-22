@@ -29,14 +29,14 @@ public class RunnerStudent {
         student1.setSpeciality("physics");
         student1.setSpeciality("mathematics");
 
-        student1.setNumberOfGroup(1.1);
-        student1.setNumberOfGroup(2.1);
-        student1.setNumberOfGroup(3.1);
-        student1.setNumberOfGroup(4.1);
+        student1.setNumberOfGroup(1);
+        student2.setNumberOfGroup(2);
+        student3.setNumberOfGroup(5);
+        student4.setNumberOfGroup(3);
 
-        System.out.println("student1 - "+student1);
-        System.out.println("student2 - "+student2);
-        System.out.println("student3 - "+student3);
-        System.out.println("student4 - "+student4);
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(student3);
+        System.out.println(student4);
     }
 }
