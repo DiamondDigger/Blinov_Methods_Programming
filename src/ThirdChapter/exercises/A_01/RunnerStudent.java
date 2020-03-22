@@ -47,9 +47,12 @@ public class RunnerStudent {
         Student student8 = new Student();
 
         String name = Arrays.toString(StudentParameters.firstName.values());
-//        name.replace("[", "");
-        name.replaceAll("]", "");
-        name.replaceAll(" ", "");
+        System.out.println("name"+name);
+        name= name.replace("[","");
+        name= name.replace("]","");
+        System.out.println("name after -1- replacement: "+name);
+        name =name.replaceAll(" ", "");
+        System.out.println("name after -2- replacement: "+name);
 
         String[] nameArr = name.split(",");
 
