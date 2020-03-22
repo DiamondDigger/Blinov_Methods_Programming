@@ -5,8 +5,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CreateAdWriteToFile {
+    private static String pathName = "D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\log.txt";
+
     public static void main(String[] args) throws IOException {
-        String pathName = "D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\log.txt";
         File file = new File(pathName);
         boolean createFile = false;
         if (file.createNewFile()) {
@@ -22,4 +23,18 @@ public class CreateAdWriteToFile {
             System.out.println("Didn't create file log.txt");
         }
     }
+
+    public String getPathName() {
+        return pathName;
+    }
+
+    public void writeToFile(String pathName, String text) throws IOException {
+        String path = pathName;
+        FileWriter fileWriter = new FileWriter(path);
+        fileWriter.write(text);
+        fileWriter.close();
+        return;
+    }
+
+
 }

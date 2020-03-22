@@ -48,7 +48,7 @@ public class RunnerStudent {
         Student student8 = new Student();
 
 // set name from Enum
-        System.out.println("\n"+"Set name from enum*********************");
+        System.out.println("\n" + "Set name from enum*********************");
         String name = Arrays.toString(StudentParameters.firstName.values());
         System.out.println("name" + name);
         name = name.replace("[", "");
@@ -77,7 +77,7 @@ public class RunnerStudent {
 
 
         // set name from file Names.txt
-        System.out.println("\n"+"Set name from file*********************");
+        System.out.println("\n" + "Set name from file*********************");
         GetNameFromFile nameFromFile = new GetNameFromFile();
 
 
@@ -85,9 +85,25 @@ public class RunnerStudent {
         student6.setFirstName(nameFromFile.getNameFromFile());
         student7.setFirstName(nameFromFile.getNameFromFile());
         student8.setFirstName(nameFromFile.getNameFromFile());
-        System.out.println("student5 : "+ student5.getFirstName());
-        System.out.println("student6 : "+student6.getFirstName());
-        System.out.println("student7 : "+student7.getFirstName());
-        System.out.println("student8 : "+student8.getFirstName());
+        System.out.println("student5 : " + student5.getFirstName());
+        System.out.println("student6 : " + student6.getFirstName());
+        System.out.println("student7 : " + student7.getFirstName());
+        System.out.println("student8 : " + student8.getFirstName());
+
+        // create file log.txt and write names in it
+        CreateAdWriteToFile createAdWriteToFile = new CreateAdWriteToFile();
+
+        String listOfNames = student5.getFirstName() + "\n"
+                + student6.getFirstName() + "\n"
+                + student7.getFirstName() + "\n"
+                + student8.getFirstName();
+        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames);
+
+
+        student5.setFirstName(nameFromFile.getNameFromFile());
+        student6.setFirstName(nameFromFile.getNameFromFile());
+        student7.setFirstName(nameFromFile.getNameFromFile());
+        student8.setFirstName(nameFromFile.getNameFromFile());
+
     }
 }
