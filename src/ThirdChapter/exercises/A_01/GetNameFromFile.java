@@ -18,6 +18,7 @@ public class GetNameFromFile {
         return namesArr[number];
     }
 
+
 //    public void printOutFileContent(GetNameFromFile,){
 //        System.out.println(content);
 //    }
