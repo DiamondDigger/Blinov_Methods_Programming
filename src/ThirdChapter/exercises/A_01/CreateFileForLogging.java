@@ -4,13 +4,14 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class CreateFileForLogging {
-    private String pathName;
-    private String fileName;
+    private String pathName = "D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\logNames.txt";
 
-   private FileWriter fileWriter = new FileWriter(getPathName());
+    private String fileName;
 
     public CreateFileForLogging() throws IOException {
     }
+
+    private FileWriter fileWriter = new FileWriter(pathName);
 
     public CreateFileForLogging(String pathName) throws IOException {
         this.pathName = pathName;
@@ -40,10 +41,10 @@ public class CreateFileForLogging {
     public void addInfoInFile(String text, boolean close) throws IOException {
         boolean closeWriter = close;
 //        FileWriter fileWriter = new FileWriter(pathName);
-        fileWriter.append("********************************************");
+        fileWriter.append("********************************************\n");
         fileWriter.append(text);
         fileWriter.append("\n");
-        if (close){
+        if (closeWriter) {
             fileWriter.close();
         }
     }

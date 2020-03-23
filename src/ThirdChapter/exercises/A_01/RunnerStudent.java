@@ -110,10 +110,9 @@ public class RunnerStudent {
         // create file logNames.txt
         CreateFileForLogging fileForLogging = new CreateFileForLogging();
 
-        fileForLogging.setPathName("D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\" +
-                "logNames.txt");
+//        fileForLogging.setPathName("D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\logNames.txt");
 
-        fileForLogging.addInfoInFile(listOfNames,false);
+        fileForLogging.addInfoInFile(listOfNames, false);
 
         System.out.println();
         System.out.println("student5 : " + student5.getFirstName());
@@ -130,8 +129,8 @@ public class RunnerStudent {
                 + "\n" + student8.getFirstName()
                 + "\n_______________________________________";
 
-        fileForLogging.addInfoInFile(listOfNames,true);
-
+        fileForLogging.addInfoInFile(listOfNames, false);
+        fileForLogging.addInfoInFile("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.", true);
         System.out.println("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.");
     }
 }
