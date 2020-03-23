@@ -98,7 +98,7 @@ public class RunnerStudent {
                 + student7.getFirstName() + "\n"
                 + student8.getFirstName()
                 + "\n_______________________________________";
-        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames, false);
+        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames, true);
 
 
         student5.setFirstName(nameFromFile.getNameFromFile());
@@ -113,7 +113,7 @@ public class RunnerStudent {
         fileForLogging.setPathName("D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\" +
                 "logNames.txt");
 
-        fileForLogging.addInfoInFile(fileForLogging.getPathName(), listOfNames);
+        fileForLogging.addInfoInFile(listOfNames,false);
 
         System.out.println();
         System.out.println("student5 : " + student5.getFirstName());
@@ -130,7 +130,7 @@ public class RunnerStudent {
                 + "\n" + student8.getFirstName()
                 + "\n_______________________________________";
 
-        fileForLogging.addInfoInFile(fileForLogging.getPathName(),listOfNames);
+        fileForLogging.addInfoInFile(listOfNames,true);
 
         System.out.println("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.");
     }

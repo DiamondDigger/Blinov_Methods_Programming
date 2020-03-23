@@ -7,7 +7,7 @@ public class CreateFileForLogging {
     private String pathName;
     private String fileName;
 
-   private FileWriter fileWriter = new FileWriter(pathName);
+   private FileWriter fileWriter = new FileWriter(getPathName());
 
     public CreateFileForLogging() throws IOException {
     }
