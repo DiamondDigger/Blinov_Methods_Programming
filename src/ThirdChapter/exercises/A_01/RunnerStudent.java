@@ -17,10 +17,10 @@ public class RunnerStudent {
 
         System.out.println("********Setting missing parameters***********");
 
-        student1.setId(1l);
-        student2.setId(2l);
-        student3.setId(3l);
-        student4.setId(4l);
+        student1.setId(1L);
+        student2.setId(2L);
+        student3.setId(3L);
+        student4.setId(4L);
 
         student1.setNumberOfCourse(2);
         student2.setNumberOfCourse(2);
@@ -98,9 +98,11 @@ public class RunnerStudent {
                 + student7.getFirstName() + "\n"
                 + student8.getFirstName()
                 + "\n_______________________________________";
-        createAndWriteToFile.writeToFile(createAndWriteToFile.getPathName(), listOfNames, false);
-        String message= "ADD SOME MORE TEXT HERE!!!";
-        createAndWriteToFile.writeToFile(createAndWriteToFile.getPathName(), message, false);
+
+        createAndWriteToFile.writeToFile(listOfNames, false);
+        String message= "\nADD SOME MORE TEXT HERE!!!\n";
+        createAndWriteToFile.writeToFile(message, false);
+        createAndWriteToFile.writeToFile("***************************************", true);
 
 
         student5.setFirstName(nameFromFile.getNameFromFile());
@@ -108,11 +110,8 @@ public class RunnerStudent {
         student7.setFirstName(nameFromFile.getNameFromFile());
         student8.setFirstName(nameFromFile.getNameFromFile());
 
-
         // create file logNames.txt
         CreateFileForLogging fileForLogging = new CreateFileForLogging();
-
-//        fileForLogging.setPathName("D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\logNames.txt");
 
         fileForLogging.addInfoInFile(listOfNames, false);
 
@@ -122,7 +121,7 @@ public class RunnerStudent {
         System.out.println("student7 : " + student7.getFirstName());
         System.out.println("student8 : " + student8.getFirstName());
 
-        listOfNames.replaceAll("([a-z])", "");
+        listOfNames =listOfNames.replace("([a-z])", "");
 
         // put information to logNames.txt
         listOfNames = "\n" + student5.getFirstName()

@@ -6,6 +6,10 @@ import java.io.IOException;
 
 public class CreateAndWriteToFile {
     private static String pathName = "D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\log.txt";
+    private FileWriter fileWriter = new FileWriter(pathName);
+
+    public CreateAndWriteToFile() throws IOException {
+    }
 
     public static void main(String[] args) throws IOException {
         File file = new File(pathName);
@@ -28,10 +32,8 @@ public class CreateAndWriteToFile {
         return pathName;
     }
 
-    public void writeToFile(String pathName, String text, boolean close) throws IOException {
-        String path = pathName;
+    public void writeToFile(String text, boolean close) throws IOException {
         boolean closeWriter = close;
-        FileWriter fileWriter = new FileWriter(path);
         fileWriter.write(text);
         if (close){
             fileWriter.close();
