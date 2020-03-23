@@ -7,7 +7,16 @@ public class CreateFileForLogging {
     private String pathName;
     private String fileName;
 
-    public CreateFileForLogging(String pathName, String fileName) {
+   private FileWriter fileWriter = new FileWriter(pathName);
+
+    public CreateFileForLogging() throws IOException {
+    }
+
+    public CreateFileForLogging(String pathName) throws IOException {
+        this.pathName = pathName;
+    }
+
+    public CreateFileForLogging(String pathName, String fileName) throws IOException {
         this.pathName = pathName;
         this.fileName = fileName;
     }
@@ -28,11 +37,14 @@ public class CreateFileForLogging {
         this.fileName = fileName;
     }
 
-    public void addInfoInFile(String pathName, String text) throws IOException {
-        FileWriter fileWriter = new FileWriter(pathName);
+    public void addInfoInFile(String text, boolean close) throws IOException {
+        boolean closeWriter = close;
+//        FileWriter fileWriter = new FileWriter(pathName);
         fileWriter.append("********************************************");
         fileWriter.append(text);
         fileWriter.append("\n");
-        fileWriter.close();
+        if (close){
+            fileWriter.close();
+        }
     }
 }

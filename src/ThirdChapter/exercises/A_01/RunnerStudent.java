@@ -96,8 +96,9 @@ public class RunnerStudent {
         String listOfNames = student5.getFirstName() + "\n"
                 + student6.getFirstName() + "\n"
                 + student7.getFirstName() + "\n"
-                + student8.getFirstName();
-        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames);
+                + student8.getFirstName()
+                + "\n_______________________________________";
+        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames, false);
 
 
         student5.setFirstName(nameFromFile.getNameFromFile());
@@ -105,5 +106,32 @@ public class RunnerStudent {
         student7.setFirstName(nameFromFile.getNameFromFile());
         student8.setFirstName(nameFromFile.getNameFromFile());
 
+
+        // create file logNames.txt
+        CreateFileForLogging fileForLogging = new CreateFileForLogging();
+
+        fileForLogging.setPathName("D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\" +
+                "logNames.txt");
+
+        fileForLogging.addInfoInFile(fileForLogging.getPathName(), listOfNames);
+
+        System.out.println();
+        System.out.println("student5 : " + student5.getFirstName());
+        System.out.println("student6 : " + student6.getFirstName());
+        System.out.println("student7 : " + student7.getFirstName());
+        System.out.println("student8 : " + student8.getFirstName());
+
+        listOfNames.replaceAll("([a-z])", "");
+
+        // put information to logNames.txt
+        listOfNames = "\n" + student5.getFirstName()
+                + "\n" + student6.getFirstName()
+                + "\n" + student7.getFirstName()
+                + "\n" + student8.getFirstName()
+                + "\n_______________________________________";
+
+        fileForLogging.addInfoInFile(fileForLogging.getPathName(),listOfNames);
+
+        System.out.println("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.");
     }
 }

@@ -28,12 +28,14 @@ public class CreateAdWriteToFile {
         return pathName;
     }
 
-    public void writeToFile(String pathName, String text) throws IOException {
+    public void writeToFile(String pathName, String text, boolean close) throws IOException {
         String path = pathName;
+        boolean closeWriter = close;
         FileWriter fileWriter = new FileWriter(path);
         fileWriter.write(text);
-        fileWriter.close();
-        return;
+        if (close){
+            fileWriter.close();
+        }
     }
 
 
