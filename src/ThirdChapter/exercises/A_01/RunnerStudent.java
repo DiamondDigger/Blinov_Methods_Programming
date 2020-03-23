@@ -91,14 +91,16 @@ public class RunnerStudent {
         System.out.println("student8 : " + student8.getFirstName());
 
         // create file log.txt and write names in it
-        CreateAdWriteToFile createAdWriteToFile = new CreateAdWriteToFile();
+        CreateAndWriteToFile createAndWriteToFile = new CreateAndWriteToFile();
 
         String listOfNames = student5.getFirstName() + "\n"
                 + student6.getFirstName() + "\n"
                 + student7.getFirstName() + "\n"
                 + student8.getFirstName()
                 + "\n_______________________________________";
-        createAdWriteToFile.writeToFile(createAdWriteToFile.getPathName(), listOfNames, true);
+        createAndWriteToFile.writeToFile(createAndWriteToFile.getPathName(), listOfNames, false);
+        String message= "ADD SOME MORE TEXT HERE!!!";
+        createAndWriteToFile.writeToFile(createAndWriteToFile.getPathName(), message, false);
 
 
         student5.setFirstName(nameFromFile.getNameFromFile());
@@ -130,7 +132,7 @@ public class RunnerStudent {
                 + "\n_______________________________________";
 
         fileForLogging.addInfoInFile(listOfNames, false);
-        fileForLogging.addInfoInFile("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.", true);
+        fileForLogging.addInfoInFile("\n All WORK IS DONE! LOG FILES SAVE INFO ABOUT NAMES", true);
         System.out.println("\n All WORK IS DONE! CHECK LOG FILES IN DIR RESOURCES.");
     }
 }

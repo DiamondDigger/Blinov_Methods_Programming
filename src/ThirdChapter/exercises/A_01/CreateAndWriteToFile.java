@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CreateAdWriteToFile {
+public class CreateAndWriteToFile {
     private static String pathName = "D:\\home_Projects\\udemy\\practice-java-building-projects\\Blinov\\Begining\\src\\ThirdChapter\\resources\\log.txt";
 
     public static void main(String[] args) throws IOException {
