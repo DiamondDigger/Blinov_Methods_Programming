@@ -12,5 +12,6 @@ public class CardRunner {
 
         card3.checkCreditLimit();                        // неполиморфный метод
         ((CreditCardAction)card2).checkCreditLimit();    // скастили
+
     }
 }
