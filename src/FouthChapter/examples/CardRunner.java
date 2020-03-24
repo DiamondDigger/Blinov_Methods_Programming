@@ -7,9 +7,10 @@ public class CardRunner {
         CreditCardAction card3 = new CreditCardAction();
 
         card1.doPayment(10.2);
-        card2.doPayment(13.2);  // динмаческий полиморфизм
-        card3.doPayment(9.99);  // динмаческий полиморфизм
+        card2.doPayment(13.2);             // динмаческий полиморфизм
+        card3.doPayment(9.99);             // динмаческий полиморфизм
 
-        card3.checkCreditLimit();             // неполиморфный метод
+        card3.checkCreditLimit();                        // неполиморфный метод
+        ((CreditCardAction)card2).checkCreditLimit();    // скастили
     }
 }
