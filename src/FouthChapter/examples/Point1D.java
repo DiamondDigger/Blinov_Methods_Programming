@@ -7,7 +7,7 @@ public class Point1D {
         System.out.println("Point1D");
     }
 
-    public double length(int x){
+    public double length(){
         return Math.abs(x);
     }
 

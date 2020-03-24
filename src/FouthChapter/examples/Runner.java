@@ -6,5 +6,10 @@ public class Runner {
         Point2D point2D = new Point2D(3, 5);
         Point3D point3D = new Point3D(1, 2, 3);
 
+        PointReport pointReport = new PointReport();
+        pointReport.printReport(point1D);
+        pointReport.printReport(point2D);
+        pointReport.printReport(point3D);
+
     }
 }
