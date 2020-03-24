@@ -6,11 +6,7 @@ public abstract class AbstractCardAction {
         }
 
         public boolean checkList(double amount){
-            if (amount > 0) {
-                return true;
-            } else {
-                return false;
-            }
+            return amount > 0;
         }
 
         public abstract void doPayment(double amount);
