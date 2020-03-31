@@ -8,7 +8,7 @@ public class Runner {
         Word ridden = new Word("ridden");
         Word by = new Word("by");
         Word man = new Word("man");
-        Sentence.addWord(horse);
+        sentence.addWord(horse);
         sentence.addWord(was);
         sentence.addWord(ridden);
         sentence.addWord(by);
